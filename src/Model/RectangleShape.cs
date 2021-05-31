@@ -50,5 +50,10 @@ namespace Draw
 			grfx.DrawRectangle(Pens.Black,Rectangle.X, Rectangle.Y, Rectangle.Width, Rectangle.Height);
 			
 		}
-	}
+
+        public override void MakeBigger()
+        {
+            base.MakeBigger();
+        }
+    }
 }

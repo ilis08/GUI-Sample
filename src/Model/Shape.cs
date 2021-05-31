@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 namespace Draw
@@ -6,6 +7,8 @@ namespace Draw
 	/// <summary>
 	/// Базовия клас на примитивите, който съдържа общите характеристики на примитивите.
 	/// </summary>
+	/// 
+	[Serializable]
 	public abstract class Shape
 	{
 		#region Constructors
@@ -28,6 +31,8 @@ namespace Draw
 			
 			this.FillColor =  shape.FillColor;
 		}
+
+		public List<Shape> ListShape = new List<Shape>();
 		#endregion
 		
 		#region Properties
@@ -103,6 +108,11 @@ namespace Draw
 		{
 			// shape.Rectangle.Inflate(shape.BorderWidth, shape.BorderWidth);
 		}
-		
+
+		public virtual void MakeBigger()
+        {
+			Width += 20;
+			Height += 20;
+        }
 	}
 }

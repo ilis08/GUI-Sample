@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 
 namespace Draw
@@ -15,6 +18,9 @@ namespace Draw
 		/// Агрегирания диалогов процесор във формата улеснява манипулацията на модела.
 		/// </summary>
 		private DialogProcessor dialogProcessor = new DialogProcessor();
+
+		private List<Shape> shapes = new List<Shape>();
+		
 		
 		public MainForm()
 		{
@@ -138,5 +144,11 @@ namespace Draw
 
 			viewPort.Invalidate();
         }
-    }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+		}
+		
+	}
 }
